@@ -5,7 +5,7 @@ from string import Template
 
 import timeit
 
-N = 2048
+N = 128
 
 kernel_code_template = Template("""
 __global__ void matmul_kernel(float *d_C, float *d_A, float *d_B)
