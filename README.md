@@ -3,5 +3,5 @@
 
 Задания:
 - [x] MatMul
-- [ ] Bilinear interp
+- [x] Bilinear interp
 - [ ] Bilateral
