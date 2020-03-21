@@ -7,4 +7,4 @@ PyCharm, Cuda compilation tools V9.1.85.
 Задания:
 - [x] MatMul
 - [x] Bilinear interp
-- [ ] Bilateral
+- [x] Bilateral
