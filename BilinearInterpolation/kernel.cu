@@ -7,6 +7,6 @@ __global__ void interpolate(unsigned int * __restrict__ d_result, const int M1, 
 
     float x = (float(l)/N1)*M1;
     float y = (float(k)/N2)*M2;
-    if ((l<N1)&&(k<N2)) { d_result[l*N1 + k] = tex2D(tex, y, x); }
+    if ((l<N1)&&(k<N2)) { d_result[l*N1 + k] = tex2D(tex, l + 0.5f , k + 0.5f); }
 
 }

@@ -5,7 +5,7 @@ import cv2
 import timeit
 from utils import bilateral
 
-IMG_PATH = './data/deer-gray.bmp'
+IMG_PATH = './data/seal-gray.bmp'
 
 image = cv2.imread(IMG_PATH, cv2.IMREAD_GRAYSCALE)
 
@@ -40,7 +40,7 @@ stop.synchronize()
 gpu_time = stop.time_since(start)
 print("Время фильтрации на ГПУ: %.3f ms" % (gpu_time))
 
-cv2.imwrite("./data/gpu-deer.bmp", gpu_result.astype(np.uint8))
+cv2.imwrite("./data/gpu-seal.bmp", gpu_result.astype(np.uint8))
 
 
 print("Считаем на ЦПУ...")
@@ -49,4 +49,4 @@ cpu_result = bilateral(image, sigma_d, sigma_r)
 cpu_time = timeit.default_timer() - start
 print("Время фильтрации на ЦПУ: %.3f ms" % (cpu_time * 1e3))
 
-cv2.imwrite("./data/cpu-deer.bmp", cpu_result)
+cv2.imwrite("./data/cpu-seal.bmp", cpu_result)
